@@ -19,7 +19,7 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    post_image = Book.find(params[:id])
+    book = Book.find(params[:id])
     book.destroy
     redirect_to books_path
   end
