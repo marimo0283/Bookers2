@@ -18,6 +18,12 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
+  def destroy
+    post_image = Book.find(params[:id])
+    book.destroy
+    redirect_to books_path
+  end
+
   private
 
   def book_params
