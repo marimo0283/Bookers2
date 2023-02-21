@@ -1,8 +1,36 @@
+
+<main>
+<p id="notice"></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h2>User info</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>name</th>
+            <th><%= @user.name %></th>
+          </tr>
+          <tr>
+            <th>introduction</th>
+            <th></th>
+          </tr>
+        </tbody>
+      </table>
+      <div class="row">
+        <span><%= link_to edit_user_path(@user.id), @user %></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Book detail</h2>
 <div>
   <p><%= @book.title %></p>
   <p><%= @book.body %></p>
   <p><%= @book.user.name %></p>
   <% if @book.user == current_user %>
-    <%= link_to "削除", book_path(@book), method: :delete %>
+    <%= link_to "Destroy", book_path(@book), method: :delete %>
   <% end %>
 </div>
+</main>
