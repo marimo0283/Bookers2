@@ -1,8 +1,7 @@
-
   <p id="notice"></p>
   <div class="container">
     <div class="row">
-      
+
       <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
         <h1>Editing Book</h1>
         <%= form_with model: @book do |f| %>
@@ -20,9 +19,9 @@
           </div>
         <% end %>
         </div>
-        <%= link_to "Show", book_path(@book.id) do %>
+        <%= link_to "Show", book_path(@book.id) %>
         |
-        <%= link_to "Back", books_path do %>
+        <%= link_to "Back", books_path %>
       </div>
     </div>
   </div>
