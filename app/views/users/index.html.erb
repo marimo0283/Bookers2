@@ -1,22 +1,8 @@
-<h2>User info</h2>
-      <table>
-        <tbody>
-          <tr>
-            <th><%= image_tag @user.get_profile_image(100,100) %></th>
-          </tr>
-          <tr>
-            <th>name</th>
-            <th><%= @user.name %></th>
-          </tr>
-          <tr>
-            <th>introduction</th>
-            <th><%= @user.introduction %></th>
-          </tr>
-        </tbody>
-      </table>
-      <div class="row">
-        <span><%= link_to "edit", edit_user_path(@user.id) %></span>
-      </div>
+<main>
+<p id="notice"></p>
+<div class="container">
+  <div class="row">
+    <%= render 'books/list', books: @books %>
 
       <div class="col-md-8 offset-md-1">
         <h2>Users</h2>
@@ -39,3 +25,6 @@
           </tbody>
         </table>
       </div>
+  </div>
+</div>
+</main>
