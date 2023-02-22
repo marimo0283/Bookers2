@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
+  # Welcome! You have signed up successfully.
+  # Signed in successfully.
+  # Signed in successfully.
+
   protected
 
   def configure_permitted_parameters
